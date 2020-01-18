@@ -44,7 +44,7 @@ def index():
         return render_template("main_page.html", groceries=Groceries.query.all())
 
     groceries_name = Groceries(content=request.form["contents"])
-    groceries_quantity = Groceries(quantity=request.form["contents"])
+    groceries_quantity = Groceries(quantity=request.form["quantities"])
     db.session.add(groceries_name)
     db.session.add(groceries_quantity)
     db.session.commit()
