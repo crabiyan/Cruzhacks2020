@@ -43,7 +43,8 @@ def index():
     if request.method == "GET":
         return render_template("main_page.html", groceries=Groceries.query.all())
 
-    groceries = Groceries(content=request.form["contents"])
+    groceries_name = Groceries(content=request.form["contents"])
+    groceries_quantity = Groceries(quantity=request.form["contents"])
     db.session.add(groceries)
     db.session.commit()
     return redirect(url_for('index'))
