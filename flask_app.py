@@ -24,6 +24,7 @@ class Food(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(4096))
+    count = db.Column(db.Integer)
 
 @app.route('/update_server', methods=['POST'])
 def webhook():
