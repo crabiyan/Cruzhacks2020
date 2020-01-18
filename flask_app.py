@@ -45,7 +45,8 @@ def index():
 
     groceries_name = Groceries(content=request.form["contents"])
     groceries_quantity = Groceries(quantity=request.form["contents"])
-    db.session.add(groceries)
+    db.session.add(groceries_name)
+    db.session.add(groceries_quantity)
     db.session.commit()
     return redirect(url_for('index'))
 
