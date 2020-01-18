@@ -25,16 +25,16 @@
 
 
         <div class="container">
-            {% for comment in comments %}
+            {% for food_item in food %}
                 <div class="row">
-                    {{ comment.content }}
+                    {{ food_item.content }}
                 </div>
             {% endfor %}
 
             <div class="row">
                 <form action="." method="POST">
-                    <textarea name="contents" placeholder="Enter a comment" class="form-control"></textarea>
-                    <input type="submit" class="btn btn-success" value="Post comment">
+                    <textarea name="contents" placeholder="Enter a Food Item" class="form-control"></textarea>
+                    <input type="submit" class="btn btn-success" value="Post Food">
                 </form>
             </div>
 
